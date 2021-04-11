@@ -38,6 +38,15 @@ const Slider = function (options) {
 
     function sliderFunc(selector) {
         directionFunc(selector);
+        paginationFunc(selector);
+    }
+
+    function paginationFunc(selector) {
+        let paginationBullet = "";
+        for (let i = 1; i < selector.itemLength + 1; i++) {
+            paginationBullet += '<span class="bullet ' + (selector.activeItem == i ? "active" : "") + '"></span>';
+        }
+        selector.pagination.innerHTML = paginationBullet;
     }
 
     function directionFunc(selector) {
@@ -51,6 +60,8 @@ const Slider = function (options) {
         selector.next.addEventListener("click", () => {
             if (selector.slideIndex < selector.itemLength) {
                 navigationNextFunc(selector);
+                currentItemFunc(selector);
+                currentPaginationFunc(selector);
                 selector.slideIndex++;
             }
         });
@@ -58,6 +69,9 @@ const Slider = function (options) {
         selector.prev.addEventListener("click", () => {
             if (selector.slideIndex > 1) {
                 selector.slideIndex--;
+                prevIndex = 1;
+                currentItemFunc(selector, prevIndex);
+                currentPaginationFunc(selector, prevIndex);
                 navigationPrevFunc(selector);
             }
         });
@@ -79,6 +93,32 @@ const Slider = function (options) {
             selector.wrapper.style.transform = 'translate3d(0, -' + (selector.containerHeight * (selector.slideIndex - 1)) + 'px,0)';
         }
     }
+
+    function currentItemFunc(selector, prevIndex) {
+        selector.items.forEach((item, key) => {
+            prevIndex != null ? (key = key + prevIndex) : 0;
+            if (selector.slideIndex === key) {
+                item.classList.add("slide-item-active");
+            }
+            else {
+                item.classList.remove("slide-item-active");
+            }
+        });
+    }
+
+    function currentPaginationFunc(selector, prevIndex) {
+        selector.pagination.querySelectorAll(".bullet").forEach((bullet, key) => {
+            prevIndex != null ? (key = key + prevIndex) : 0;
+            if (selector.slideIndex === key) {
+                bullet.classList.add("active");
+            }
+            else {
+                bullet.classList.remove("active");
+            }
+        });
+    }
+
+
 
     sliderFunc(selector);
 
