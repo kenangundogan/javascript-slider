@@ -42,14 +42,13 @@ body{
         }
 
         > .body{
-            width: calc(100% + 100px);
-            margin: 50px -50px 0px -50px;
-            padding: 50px 50px 0px 50px;
-            border-top: dashed 1px #dedede;
-            p{
-                margin-bottom: 20px;
-                font-size: 14px;
-                font-family: $font-family-sans-serif;
+            position: relative;
+            width: 100%;
+            padding-top: 56%;
+            .slider-container{
+                position: absolute;
+                top: 0; left: 0;
+                width: 100%;
             }
         }
     }
