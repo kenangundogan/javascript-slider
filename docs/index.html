@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Slider</title>
+    <meta name="description" content="Javascript Slider - tiny and simple.">
+    <meta name="author" content="Kenan Gündoğan">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="example">
+            <div class="head">
+                <div class="title">Javascript Slider</div>
+                <div class="description">
+                    Javascript slider - tiny and simple.
+                    <span class="info">Default</span>
+                </div>
+            </div>
+
+            <div class="body">
+                <div class="slider-container" id="default">
+                    <div class="slider-wrapper">
+                        <div class="slider-item">
+                            <div class="img">
+                                <img src="images/nature-1.jpg" alt="Nature 1">
+                            </div>
+                            <span>1</span>
+                        </div>
+                        <div class="slider-item">
+                            <div class="img">
+                                <img src="images/nature-2.jpg" alt="Nature 2">
+                            </div>
+                            <span>2</span>
+                        </div>
+                        <div class="slider-item">
+                            <div class="img">
+                                <img src="images/nature-3.jpg" alt="Nature 3">
+                            </div>
+                            <span>3</span>
+                        </div>
+                        <div class="slider-item">
+                            <div class="img">
+                                <img src="images/nature-4.jpg" alt="Nature 4">
+                            </div>
+                            <span>4</span>
+                        </div>
+                    </div>
+                    <div class="navigation next"></div>
+                    <div class="navigation prev"></div>
+                    <div class="pagination"></div>
+                </div>
+            </div>
+
+            <script>
+                var slider = new Slider({
+                    element: "#default",
+                    activeItem: 1
+                });
+            </script>
+
+        </div>
+
+        <div class="example">
+            <div class="head">
+                <div class="title">Javascript Slider</div>
+                <div class="description">
+                    Javascript slider - tiny and simple.
+                    <span class="info">Vertical</span>
+                </div>
+            </div>
+
+            <div class="body">
+                <div class="slider-container" id="vertical">
+                    <div class="slider-wrapper">
+                        <div class="slider-item">
+                            <div class="img">
+                                <img src="images/nature-1.jpg" alt="Nature 1">
+                            </div>
+                            <span>1</span>
+                        </div>
+                        <div class="slider-item">
+                            <div class="img">
+                                <img src="images/nature-2.jpg" alt="Nature 2">
+                            </div>
+                            <span>2</span>
+                        </div>
+                        <div class="slider-item">
+                            <div class="img">
+                                <img src="images/nature-3.jpg" alt="Nature 3">
+                            </div>
+                            <span>3</span>
+                        </div>
+                        <div class="slider-item">
+                            <div class="img">
+                                <img src="images/nature-4.jpg" alt="Nature 4">
+                            </div>
+                            <span>4</span>
+                        </div>
+                    </div>
+                    <div class="navigation next"></div>
+                    <div class="navigation prev"></div>
+                    <div class="pagination"></div>
+                </div>
+            </div>
+
+            <script>
+                var slider = new Slider({
+                    element: "#vertical",
+                    direction: "vertical",
+                    activeItem: 1
+                });
+            </script>
+
+        </div>
+    </div>
+</body>
+
+</html>
