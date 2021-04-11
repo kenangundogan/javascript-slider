@@ -7,12 +7,14 @@ javascript slider - tiny and simple.
 [![CSS gzip size](https://img.badgesize.io/kenangundogan/javascript-slider/main/dist/style/style.css?compression=gzip&label=CSS%20gzip%20size)](https://github.com/kenangundogan/javascript-slider/blob/main/dist/style/style.css)
 [![CSS Brotli size](https://img.badgesize.io/kenangundogan/javascript-slider/main/dist/style/style.css?compression=brotli&label=CSS%20Brotli%20size)](https://github.com/kenangundogan/javascript-slider/blob/main/dist/style/style.css)
 
+![Javascript Slider](https://raw.githubusercontent.com/kenangundogan/javascript-slider/main/asset/javascript-slider-cover.png)
+
 ## Options
 Option | Type | Default | Description | Example
 ------ | ---- | ------- | ----------- | -----------
-element | string or object | selector | id or class DOM element | [Example](https://kenangundogan.github.io/javascript-accordion/javascript-slider)
-direction | string | horizontal | vertical or horizontal | [Example](https://kenangundogan.github.io/javascript-accordion/javascript-slider)
-activeItem | int | 1 | active item to be open at startup | [Example](https://kenangundogan.github.io/javascript-accordion/javascript-slider)
+element | string or object | selector | id or class DOM element | [Example](https://kenangundogan.github.io/javascript-slider/javascript-slider)
+direction | string | horizontal | vertical or horizontal | [Example](https://kenangundogan.github.io/javascript-slider/javascript-slider)
+activeItem | int | 1 | active item to be open at startup | [Example](https://kenangundogan.github.io/javascript-slider/javascript-slider)
 
 ## Usage example
 ### Script
