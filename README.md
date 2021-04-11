@@ -12,9 +12,9 @@ javascript slider - tiny and simple.
 ## Options
 Option | Type | Default | Description | Example
 ------ | ---- | ------- | ----------- | -----------
-element | string or object | selector | id or class DOM element | [Example](https://kenangundogan.github.io/javascript-slider/javascript-slider)
-direction | string | horizontal | vertical or horizontal | [Example](https://kenangundogan.github.io/javascript-slider/javascript-slider)
-activeItem | int | 1 | active item to be open at startup | [Example](https://kenangundogan.github.io/javascript-slider/javascript-slider)
+element | string or object | selector | id or class DOM element | [Example](https://kenangundogan.github.io/javascript-slider)
+direction | string | horizontal | vertical or horizontal | [Example](https://kenangundogan.github.io/javascript-slider)
+activeItem | int | 1 | active item to be open at startup | [Example](https://kenangundogan.github.io/javascript-slider)
 
 ## Usage example
 ### Script
