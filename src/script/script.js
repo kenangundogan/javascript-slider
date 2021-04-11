@@ -6,7 +6,7 @@
 
 const Slider = function (options) {
 
-    var element = options.element,
+    const element = options.element,
         activeItem = options.activeItem,
         direction = options.direction,
         container = document.querySelector(element),
@@ -44,7 +44,7 @@ const Slider = function (options) {
     function paginationFunc(selector) {
         let paginationBullet = "";
         for (let i = 1; i < selector.itemLength + 1; i++) {
-            paginationBullet += '<span class="bullet ' + (selector.activeItem == i ? "active" : "") + '"></span>';
+            paginationBullet += `<span class="bullet ${selector.activeItem == i ? "active" : ""}"></span>`;
         }
         selector.pagination.innerHTML = paginationBullet;
     }
@@ -79,36 +79,36 @@ const Slider = function (options) {
 
     function navigationNextFunc(selector) {
         if (selector.direction != "vertical") {
-            selector.wrapper.style.transform = 'translate3d(-' + (selector.containerWidth * selector.slideIndex) + 'px,0,0)';
+            selector.wrapper.style.transform = `translate3d(-${selector.containerWidth * selector.slideIndex}px,0,0)`;
         }
         else {
-            selector.wrapper.style.transform = 'translate3d(0, -' + (selector.containerHeight * selector.slideIndex) + 'px,0)';
+            selector.wrapper.style.transform = `translate3d(0, -${selector.containerHeight * selector.slideIndex}px,0)`;
         }
     }
     function navigationPrevFunc(selector) {
         if (selector.direction != "vertical") {
-            selector.wrapper.style.transform = 'translate3d(-' + (selector.containerWidth * (selector.slideIndex - 1)) + 'px,0,0)';
+            selector.wrapper.style.transform = `translate3d(-${selector.containerWidth * (selector.slideIndex - 1)}px,0,0)`;
         }
         else {
-            selector.wrapper.style.transform = 'translate3d(0, -' + (selector.containerHeight * (selector.slideIndex - 1)) + 'px,0)';
+            selector.wrapper.style.transform = `translate3d(0, -${selector.containerHeight * (selector.slideIndex - 1)}px,0)`;
         }
     }
 
     function currentItemFunc(selector, prevIndex) {
         selector.items.forEach((item, key) => {
-            prevIndex != null ? (key = key + prevIndex) : 0;
+            prevIndex != null ? (key = key + prevIndex) : key;
             if (selector.slideIndex === key) {
-                item.classList.add("slide-item-active");
+                item.classList.add("active");
             }
             else {
-                item.classList.remove("slide-item-active");
+                item.classList.remove("active");
             }
         });
     }
 
     function currentPaginationFunc(selector, prevIndex) {
         selector.pagination.querySelectorAll(".bullet").forEach((bullet, key) => {
-            prevIndex != null ? (key = key + prevIndex) : 0;
+            prevIndex != null ? (key = key + prevIndex) : key;
             if (selector.slideIndex === key) {
                 bullet.classList.add("active");
             }
@@ -118,8 +118,7 @@ const Slider = function (options) {
         });
     }
 
-
-
     sliderFunc(selector);
-
 }
+
+window.Slider = Slider;
