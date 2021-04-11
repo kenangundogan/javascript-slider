@@ -7,7 +7,7 @@ javascript slider - tiny and simple.
 [![CSS gzip size](https://img.badgesize.io/kenangundogan/javascript-slider/main/dist/style/style.css?compression=gzip&label=CSS%20gzip%20size)](https://github.com/kenangundogan/javascript-slider/blob/main/dist/style/style.css)
 [![CSS Brotli size](https://img.badgesize.io/kenangundogan/javascript-slider/main/dist/style/style.css?compression=brotli&label=CSS%20Brotli%20size)](https://github.com/kenangundogan/javascript-slider/blob/main/dist/style/style.css)
 
-![Javascript Slider](https://raw.githubusercontent.com/kenangundogan/javascript-slider/main/asset/javascript-slider-cover.png)
+![Javascript Slider](https://raw.githubusercontent.com/kenangundogan/javascript-slider/main/asset/javascript-slider-cover.jpg)
 
 ## Options
 Option | Type | Default | Description | Example
