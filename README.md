@@ -22,7 +22,8 @@ activeItem | int | 1 | active item to be open at startup | [Example](https://ken
 var slider = new Slider({
     element: "#example",
     direction: "vertical",
-    activeItem: 1
+    activeItem: 1,
+    pagination: true
 });
 ```
 
@@ -35,6 +36,9 @@ var slider = new Slider({
         </div>
     </li>
     ...
+    <div class="navigation next"></div>
+    <div class="navigation prev"></div>
+    <div class="pagination"></div>
 </ul>
 ```
 
