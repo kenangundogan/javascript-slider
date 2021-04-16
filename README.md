@@ -15,6 +15,7 @@ Option | Type | Default | Description | Example
 element | string or object | selector | id or class DOM element | [Example](https://kenangundogan.github.io/javascript-slider)
 direction | string | horizontal | vertical or horizontal | [Example](https://kenangundogan.github.io/javascript-slider)
 activeItem | int | 1 | active item to be open at startup | [Example](https://kenangundogan.github.io/javascript-slider)
+pagination | boolean | false | pagination active or passive | [Example](https://kenangundogan.github.io/javascript-slider)
 
 ## Usage example
 ### Script
